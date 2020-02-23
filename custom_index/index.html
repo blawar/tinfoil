@@ -1,0 +1,605 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1, mkdocs-material-4.6.3">
+    
+    
+      
+        <title>Custom Index - Tinfoil Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/application.adb8469c.css">
+      
+      
+    
+    
+      <script src="../assets/javascripts/modernizr.86422ebf.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../assets/fonts/material-icons.css">
+    
+    
+    
+      
+    
+    
+  </head>
+  
+    <body dir="ltr">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#basic-format" tabindex="0" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href=".." title="Tinfoil Documentation" aria-label="Tinfoil Documentation" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              Tinfoil Documentation
+            </span>
+            <span class="md-header-nav__topic">
+              
+                Custom Index
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" aria-label="search" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main" role="main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href=".." title="Tinfoil Documentation" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    Tinfoil Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href=".." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../network/" title="Network Install" class="md-nav__link">
+      Network Install
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../usb/" title="USB Install" class="md-nav__link">
+      USB Install
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Custom Index
+      </label>
+    
+    <a href="./" title="Custom Index" class="md-nav__link md-nav__link--active">
+      Custom Index
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#basic-format" class="md-nav__link">
+    Basic Format
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#detailed-format" class="md-nav__link">
+    Detailed Format
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#message-of-the-day" class="md-nav__link">
+    Message of the Day
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#referrer" class="md-nav__link">
+    Referrer
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#google-api-key" class="md-nav__link">
+    Google API Key
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#custom-http-headers" class="md-nav__link">
+    Custom HTTP Headers
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#minimum-tinfoil-version-required" class="md-nav__link">
+    Minimum Tinfoil Version Required
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#client-certificate" class="md-nav__link">
+    Client Certificate
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#theme-blacklist" class="md-nav__link">
+    Theme Blacklist
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#theme-whitelist" class="md-nav__link">
+    Theme Whitelist
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../drm/" title="DRM" class="md-nav__link">
+      DRM
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../mtp/" title="MTP" class="md-nav__link">
+      MTP
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#basic-format" class="md-nav__link">
+    Basic Format
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#detailed-format" class="md-nav__link">
+    Detailed Format
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#message-of-the-day" class="md-nav__link">
+    Message of the Day
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#referrer" class="md-nav__link">
+    Referrer
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#google-api-key" class="md-nav__link">
+    Google API Key
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#custom-http-headers" class="md-nav__link">
+    Custom HTTP Headers
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#minimum-tinfoil-version-required" class="md-nav__link">
+    Minimum Tinfoil Version Required
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#client-certificate" class="md-nav__link">
+    Client Certificate
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#theme-blacklist" class="md-nav__link">
+    Theme Blacklist
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#theme-whitelist" class="md-nav__link">
+    Theme Whitelist
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  <h1>Custom Index</h1>
+                
+                <p>A custom Tinfoil index is a special JSON file that contains a list of a files, directories, and other special parameters.  To load this index, you can either serve it over a http web server, or you can name it *.tfl and place it in any directory that Tinfoil scans.</p>
+<h2 id="basic-format">Basic Format</h2>
+<pre><code>{
+    &quot;files&quot;: [&quot;https://url1&quot;, &quot;sdmc:/url2&quot;, &quot;http://url3&quot;],
+    &quot;directories&quot;: [&quot;https://url1&quot;, &quot;sdmc:/url2&quot;, &quot;http://url3&quot;],
+    &quot;success&quot;: &quot;motd text here&quot;
+}
+</code></pre>
+
+<h2 id="detailed-format">Detailed Format</h2>
+<pre><code>{
+    &quot;files&quot;: [
+        {
+            &quot;url&quot;: &quot;https://url1&quot;,
+            &quot;size&quot;: 1000
+        },
+        {
+            &quot;url&quot;: &quot;https://url2&quot;,
+            &quot;size&quot;: 3000
+        },
+        {
+            &quot;url&quot;: &quot;https://url3&quot;,
+            &quot;size&quot;: 5000
+        }
+    ],
+    &quot;directories&quot;: [&quot;https://url1&quot;, &quot;sdmc:/url2&quot;, &quot;http://url3&quot;],
+    &quot;success&quot;: &quot;motd text here&quot;
+}
+</code></pre>
+
+<h2 id="message-of-the-day">Message of the Day</h2>
+<p>You can specify a message to be presented to the user by setting either the "success" or "error" json key.</p>
+<pre><code>{
+    &quot;success&quot;: &quot;hello world&quot;
+}
+</code></pre>
+
+<h2 id="referrer">Referrer</h2>
+<p>If serving the index over http, you may specify a referrer to prevent others from hotlinking using the "referrer" json key.</p>
+<pre><code>{
+    &quot;referrer&quot;: &quot;http://mydomain.com/index.tfl&quot;
+}
+</code></pre>
+
+<h2 id="google-api-key">Google API Key</h2>
+<p>You may specify a google API key to be used with all gdrive:/ requests using the "googleApiKey" json key.</p>
+<pre><code>{
+    &quot;googleApiKey&quot;: &quot;xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx&quot;
+}
+</code></pre>
+
+<h2 id="custom-http-headers">Custom HTTP Headers</h2>
+<p>You may specify custom HTTP headers to be sent with Tinfoil requests using the "headers" json key.</p>
+<pre><code>{
+    &quot;headers&quot;: [&quot;My-Custom_header: hello&quot;, &quot;My-Custom_header2: world&quot;]
+}
+</code></pre>
+
+<h2 id="minimum-tinfoil-version-required">Minimum Tinfoil Version Required</h2>
+<p>You can specify a minimum Tinfoil version to load the index using the "version" json key.</p>
+<pre><code>{
+    &quot;version&quot;: 7.00
+}
+</code></pre>
+
+<h2 id="client-certificate">Client Certificate</h2>
+<p>You may specify a client certificate using "clientCertPub" and "clientCertKey" json keys.</p>
+<pre><code>{
+    &quot;clientCertPub&quot;: &quot;-----BEGIN PUBLIC KEY----- ....&quot;,
+    &quot;clientCertKey&quot;: &quot;-----BEGIN PRIVATE KEY----- ....&quot;
+}
+</code></pre>
+
+<h2 id="theme-blacklist">Theme Blacklist</h2>
+<p>You may specify a list of themes to blacklist based on their hash using the "themeBlackList" json key:</p>
+<pre><code>{
+    &quot;themeBlackList&quot;: [&quot;AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA&quot;, &quot;BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB&quot;]
+}
+</code></pre>
+
+<h2 id="theme-whitelist">Theme Whitelist</h2>
+<p>You may specify a list of themes to whitelist based on their hash using the "themeWhiteList" json key:</p>
+<pre><code>{
+    &quot;themeWhiteList&quot;: [&quot;AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA&quot;, &quot;BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB&quot;]
+}
+</code></pre>
+                
+                  
+                
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../usb/" title="USB Install" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                USB Install
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../drm/" title="DRM" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                DRM
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="https://www.mkdocs.org" target="_blank" rel="noopener">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs</a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/application.c33a9706.js"></script>
+      
+      <script>app.initialize({version:"1.1",url:{base:".."}})</script>
+      
+    
+  </body>
+</html>
