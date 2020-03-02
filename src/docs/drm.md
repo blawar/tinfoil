@@ -5,4 +5,7 @@ Tinfoil supports encrypting custom index jsons, to prevent unauthorized redistri
 It works by generating a random AES-128-ECB key, encrypting your content with that key, and then wrapping the key with asymetrical RSA OAEP 2048-bit and sending it to Tinfoil.
 
 ## How to Use
-You can use this simple python script to encrypt your index or html files! Run encrypt.py input.json output.tfl to encrypt via command line.
+You can use this simple python script (with the supplied public key) to encrypt your index or html files! Run encrypt.py input.json output.tfl to encrypt via command line.
+
+[encrypt.py](files/encrypt.py)
+[public.key](files/public.key)
