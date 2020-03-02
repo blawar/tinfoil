@@ -33,6 +33,14 @@ A custom Tinfoil index is a special JSON file that contains a list of a files, d
 }
 ```
 
+## Overriding File Names In Urls
+Some urls, like gdrive, do not have the correct filename in the URL.  You can tell tinfoil to use a specified filename by using the shebang:
+
+```
+gdrive:/abc102234098#filename.nsp
+```
+
+
 ## Message of the Day
 You can specify a message to be presented to the user by setting either the "success" or "error" json key.
 
