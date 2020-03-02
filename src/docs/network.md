@@ -4,7 +4,7 @@ NUT is the simplest way to install over the network. It is a piece of software t
 You can download NUT at https://github.com/blawar/nut/.
 
 #HTTP / HTTPS
-Tinfoil downloads the html (or json), and parses out the links. Tinfoil supports relative paths, and absolute if you want to link to a different server, or even another device such as your microSD card.
+Tinfoil downloads the html (or json) and parses out the links. Tinfoil supports relative paths, and absolute if you want to link to a different server, or even another device such as your microSD card.
 
 Tinfoil is known to work with Windows IIS, Apache, and Nginx. Though it should work with any HTTP server that supports ranged requests.
 
@@ -43,7 +43,7 @@ Both files and folders follow the same format.  If specifying by the google file
 
 ## Auth
 ### OAuth
-Google Drive OAuth has the highest priority, and will always be used if setup.  OAuth is the only method to access and list private files.  You must set up google drive OAuth within NUT, and then conenct Tinfoil to NUT via network or USB to transfer the OAuth token(s).
+Google Drive OAuth has the highest priority and will always be used if setup.  OAuth is the only method to access and list private files.  You must set up google drive OAuth within NUT, and then connect Tinfoil to NUT via network or USB to transfer the OAuth token(s).
 
 ### API Key
 Specifying an API key allows you to do authed requests to access private files, however listing files will not work.
@@ -53,7 +53,7 @@ This is the least reliable, however it supports listing and downloading public f
 
 # Dropbox
 Access Token
-You need an API key to ue this. Go to https://www.dropbox.com/developers/apps and create a new app, and then click the "generate access token" button to generate an access token to use with Tinfoil.
+You need an API key to use this. Go to https://www.dropbox.com/developers/apps and create a new app, and then click the "generate access token" button to generate an access token to use with Tinfoil.
 
 Adding the location
 You can edit the locations.conf file directly by adding an entry for dropbox://token:XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX@api.dropbox.com/ where XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX is your access token.
