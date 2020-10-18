@@ -333,6 +333,20 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#setting-permenent-custom-http-headers" class="md-nav__link">
+    Setting Permenent Custom Http Headers
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setting-temporary-custom-http-headers" class="md-nav__link">
+    Setting Temporary Custom Http Headers
+  </a>
+  
+</li>
+      
       
       
       
@@ -487,6 +501,20 @@
         <li class="md-nav__item">
   <a href="#adding-metadata" class="md-nav__link">
     Adding Metadata
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setting-permenent-custom-http-headers" class="md-nav__link">
+    Setting Permenent Custom Http Headers
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setting-temporary-custom-http-headers" class="md-nav__link">
+    Setting Temporary Custom Http Headers
   </a>
   
 </li>
@@ -646,6 +674,16 @@
         }
     }
 }
+</code></pre>
+
+<h2 id="setting-permenent-custom-http-headers">Setting Permenent Custom Http Headers</h2>
+<p>Any file http request can contain the header "x-set-header" which will set a global http header for all subsequent file http requests.  The value should be url encoded:</p>
+<pre><code>&quot;x-set-header: MyCustomHeader%3A%20hello%20world&quot;
+</code></pre>
+
+<h2 id="setting-temporary-custom-http-headers">Setting Temporary Custom Http Headers</h2>
+<p>Any file http request can contain the header "x-tmp-header" which will set a temporary header good only for the current request.  This only works if the headers are set and  then a 301 or 302 redirect is issued.  This is functionally a per-file-http header.  The value should be url encoded:</p>
+<pre><code>&quot;x-tmp-header: MyCustomHeader%3A%20hello%20world&quot;
 </code></pre>
                 
                   

@@ -164,3 +164,20 @@ You may add or modify title metadata using the "titledb" json key:
 	}
 }
 ```
+
+## Setting Permenent Custom Http Headers
+
+Any file http request can contain the header "x-set-header" which will set a global http header for all subsequent file http requests.  The value should be url encoded:
+
+```
+"x-set-header: MyCustomHeader%3A%20hello%20world"
+```
+
+## Setting Temporary Custom Http Headers
+
+Any file http request can contain the header "x-tmp-header" which will set a temporary header good only for the current request.  This only works if the headers are set and  then a 301 or 302 redirect is issued.  This is functionally a per-file-http header.  The value should be url encoded:
+
+```
+"x-tmp-header: MyCustomHeader%3A%20hello%20world"
+```
+
