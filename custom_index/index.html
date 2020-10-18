@@ -271,6 +271,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#1fichier-api-key" class="md-nav__link">
+    1Fichier API Key
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#custom-http-headers" class="md-nav__link">
     Custom HTTP Headers
   </a>
@@ -301,6 +308,27 @@
         <li class="md-nav__item">
   <a href="#theme-whitelist" class="md-nav__link">
     Theme Whitelist
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#custom-theme-error-message" class="md-nav__link">
+    Custom Theme Error Message
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adding-user-locations" class="md-nav__link">
+    Adding User Locations
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adding-metadata" class="md-nav__link">
+    Adding Metadata
   </a>
   
 </li>
@@ -401,6 +429,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#1fichier-api-key" class="md-nav__link">
+    1Fichier API Key
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#custom-http-headers" class="md-nav__link">
     Custom HTTP Headers
   </a>
@@ -431,6 +466,27 @@
         <li class="md-nav__item">
   <a href="#theme-whitelist" class="md-nav__link">
     Theme Whitelist
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#custom-theme-error-message" class="md-nav__link">
+    Custom Theme Error Message
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adding-user-locations" class="md-nav__link">
+    Adding User Locations
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adding-metadata" class="md-nav__link">
+    Adding Metadata
   </a>
   
 </li>
@@ -510,6 +566,13 @@
 }
 </code></pre>
 
+<h2 id="1fichier-api-key">1Fichier API Key</h2>
+<p>You may specify a 1Fichier API key to be used with all 1f:/ requests using the "oneFichierKeys" json key.  If multiple keys are provided, Tinfoil keeps trying them until it finds one that works.</p>
+<pre><code>{
+    &quot;oneFichierKeys&quot;: [&quot;ap1key1&quot;, &quot;apikey2&quot;, &quot;apikey3&quot;]
+}
+</code></pre>
+
 <h2 id="custom-http-headers">Custom HTTP Headers</h2>
 <p>You may specify custom HTTP headers to be sent with Tinfoil requests using the "headers" json key.</p>
 <pre><code>{
@@ -543,6 +606,45 @@
 <p>You may specify a list of themes to whitelist based on their hash using the "themeWhiteList" json key:</p>
 <pre><code>{
     &quot;themeWhiteList&quot;: [&quot;AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA&quot;, &quot;BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB&quot;]
+}
+</code></pre>
+
+<h2 id="custom-theme-error-message">Custom Theme Error Message</h2>
+<p>You may specify a custom theme error message using the "themeError" json key:</p>
+<pre><code>{
+    &quot;themeError&quot;: &quot;please select an authorized theme.&quot;
+}
+</code></pre>
+
+<h2 id="adding-user-locations">Adding User Locations</h2>
+<p>You may add a new location permenently to the user's File Browser using the "locations" json key:</p>
+<pre><code>{
+    &quot;locations&quot;: [
+        &quot;https://abc123.com/456/&quot;,
+        {&quot;url&quot;: &quot;https://xyz.com/blah&quot;, &quot;title&quot;: &quot;xyz&quot;, &quot;action&quot;=&quot;disable&quot;},
+        {&quot;url&quot;: &quot;https://xyz.com/blah2&quot;, &quot;title&quot;: &quot;xyz2&quot;, &quot;action&quot;=&quot;enable&quot;},
+        {&quot;url&quot;: &quot;https://xyz.com/blah3&quot;, &quot;title&quot;: &quot;xyz3&quot;, &quot;action&quot;=&quot;add&quot;}
+    ]
+}
+</code></pre>
+
+<h2 id="adding-metadata">Adding Metadata</h2>
+<p>You may add or modify title metadata using the "titledb" json key:</p>
+<pre><code>{
+    &quot;titledb&quot;: {
+        &quot;050000BADDAD0000&quot;: {
+            &quot;id&quot;: &quot;050000BADDAD0000&quot;,
+            &quot;name&quot;: &quot;Tinfoil&quot;,
+            &quot;version&quot;: 0,
+            &quot;region&quot;: &quot;US&quot;,
+            &quot;releaseDate&quot;: 20180801,
+            &quot;rating&quot;: 10,
+            &quot;publisher&quot;: &quot;N/A&quot;,
+            &quot;description&quot;: &quot;Nintendo Switch Title Manager&quot;,
+            &quot;size&quot;: 14000000,
+            &quot;rank&quot;: 1
+        }
+    }
 }
 </code></pre>
                 

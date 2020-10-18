@@ -283,8 +283,14 @@
 <p>Tinfoil will send a few custom headers when requesting a directory only (not files):</p>
 <h3 id="theme-hash">Theme Hash</h3>
 <p>The user's current Tinfoil theme hash is sent via "Theme: XXXXXXXXXXXXXXX".</p>
+<h3 id="host-signature">Host Signature</h3>
+<p>A signature of the request Url scheme and hostname is sent via "HAUTH: XXXXXXXXXXXXXX".  This value is unique to your domain, and helps prevent forged requests.  Simply verify that the client always sends the correct value.  Do not share this value.</p>
+<h3 id="host-signature_1">Host Signature</h3>
+<p>A signature of the entire request Url is sent via "UAUTH: XXXXXXXXXXXXXX".  This value is unique to your domain, and helps prevent forged requests.  Simply verify that the client always sends the correct value.  Do not share this value.</p>
 <h3 id="user-fingerprint">User Fingerprint</h3>
 <p>A unique user fingerprint is sent via "UID: XXXXXXXXXXXXXX".</p>
+<h3 id="user-language">User Language</h3>
+<p>Tinfoil's current language setting is set via "Language: XXXXXXXXXXXXXX".</p>
 <h3 id="tinfoil-version">Tinfoil Version</h3>
 <p>The client's Tinfoil version is sent via "Version: 7.00".</p>
 <h2 id="basic-directory-serving">Basic Directory Serving</h2>

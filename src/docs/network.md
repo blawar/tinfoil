@@ -14,8 +14,17 @@ Tinfoil will send a few custom headers when requesting a directory only (not fil
 ### Theme Hash
 The user's current Tinfoil theme hash is sent via "Theme: XXXXXXXXXXXXXXX".
 
+### Host Signature
+A signature of the request Url scheme and hostname is sent via "HAUTH: XXXXXXXXXXXXXX".  This value is unique to your domain, and helps prevent forged requests.  Simply verify that the client always sends the correct value.  Do not share this value.
+
+### Host Signature
+A signature of the entire request Url is sent via "UAUTH: XXXXXXXXXXXXXX".  This value is unique to your domain, and helps prevent forged requests.  Simply verify that the client always sends the correct value.  Do not share this value.
+
 ### User Fingerprint
 A unique user fingerprint is sent via "UID: XXXXXXXXXXXXXX".
+
+### User Language
+Tinfoil's current language setting is set via "Language: XXXXXXXXXXXXXX".
 
 ### Tinfoil Version
 The client's Tinfoil version is sent via "Version: 7.00".

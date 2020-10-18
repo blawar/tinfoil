@@ -66,6 +66,14 @@ You may specify a google API key to be used with all gdrive:/ requests using the
 }
 ```
 
+## 1Fichier API Key
+You may specify a 1Fichier API key to be used with all 1f:/ requests using the "oneFichierKeys" json key.  If multiple keys are provided, Tinfoil keeps trying them until it finds one that works.
+```
+{
+    "oneFichierKeys": ["ap1key1", "apikey2", "apikey3"]
+}
+```
+
 ## Custom HTTP Headers
 You may specify custom HTTP headers to be sent with Tinfoil requests using the "headers" json key.
 ```
@@ -106,5 +114,53 @@ You may specify a list of themes to whitelist based on their hash using the "the
 ```
 {
     "themeWhiteList": ["AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB"]
+}
+```
+
+## Custom Theme Error Message
+
+You may specify a custom theme error message using the "themeError" json key:
+
+```
+{
+    "themeError": "please select an authorized theme."
+}
+```
+
+## Adding User Locations
+
+You may add a new location permenently to the user's File Browser using the "locations" json key:
+
+```
+{
+    "locations": [
+		"https://abc123.com/456/",
+		{"url": "https://xyz.com/blah", "title": "xyz", "action"="disable"},
+		{"url": "https://xyz.com/blah2", "title": "xyz2", "action"="enable"},
+		{"url": "https://xyz.com/blah3", "title": "xyz3", "action"="add"}
+	]
+}
+```
+
+## Adding Metadata
+
+You may add or modify title metadata using the "titledb" json key:
+
+```
+{
+    "titledb": {
+		"050000BADDAD0000": {
+			"id": "050000BADDAD0000",
+			"name": "Tinfoil",
+			"version": 0,
+			"region": "US",
+			"releaseDate": 20180801,
+			"rating": 10,
+			"publisher": "N/A",
+			"description": "Nintendo Switch Title Manager",
+			"size": 14000000,
+			"rank": 1
+		}
+	}
 }
 ```
