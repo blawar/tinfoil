@@ -47,6 +47,20 @@ Tinfoil supports SMB / Windows File Shares.
 #Google Drive
 All google drive links use the gdrive: scheme within Tinfoil, however there are three different modes with different priority levels.
 
+#1Fichier
+This requires a 1Fichier account.  Generate a 1F api key in your 1F account settings, then input this API key in Tinfoil's options screen (case sensitive).
+
+## Accessing your private 1F files
+Go to file browser and add a new location: protocol is 1F, leave everything else the same.
+
+This will only list files and directories associated with your 1F account.
+
+## Public 1F files
+Tinfoil does not currently support listing public 1F directories, however you can generate an index of 1F file links using the following format:
+```
+1f:file_id#name.txt
+```
+
 ## URL Format
 Both files and folders follow the same format.  If specifying by the google file id, use gdrive:AAAAAAAAAAAAAAAAA (notice lack of forward slash).  If specifying a path (only works with OAuth) use gdrive:/root/folder1/file.zip
 
