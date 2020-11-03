@@ -61,6 +61,15 @@ Tinfoil does not currently support listing public 1F directories, however you ca
 1f:file_id#name.txt
 ```
 
+# Split files (JBOD)
+If your filesystem / storage provider has a max file size, tinfoil supports split files using an index.  Example index file entry:
+
+```
+jbod:10000000/sdmc%3A%2Fbah%2Fxaa/sdmc%3A%2Fbah%2Fxab/sdmc%3A%2Fbah%2Fxac/sdmc%3A%2Fbah%2Fxad/sdmc%3A%2Fbah%2Fxae/sdmc%3A%2Fbah%2Fxaf/sdmc%3A%2Fbah%2Fxag/sdmc%3A%2Fbah%2Fxah/sdmc%3A%2Fbah%2Fxai/4036670/sdmc%3A%2Fbah%2Fxaj#filename.zip
+```
+
+The first number is the size of the following chunks.  The chunk size can be changed at anytime, and is often done so for the last chunk since it is often smaller.  The chunks are urlencoded and seperated by forward slashes.
+
 ## URL Format
 Both files and folders follow the same format.  If specifying by the google file id, use gdrive:AAAAAAAAAAAAAAAAA (notice lack of forward slash).  If specifying a path (only works with OAuth) use gdrive:/root/folder1/file.zip
 
