@@ -62,10 +62,27 @@ Tinfoil does not currently support listing public 1F directories, however you ca
 ```
 
 # Split files (JBOD)
-If your filesystem / storage provider has a max file size, tinfoil supports split files using an index.  Example index file entry:
+If your filesystem / storage provider has a max file size, tinfoil supports split files using an index.
+A number in the path changes the file / chunk size.  It can be changed at any time.
+
+Example index file entry:
 
 ```
 jbod:10000000/sdmc%3A%2Fbah%2Fxaa/sdmc%3A%2Fbah%2Fxab/sdmc%3A%2Fbah%2Fxac/sdmc%3A%2Fbah%2Fxad/sdmc%3A%2Fbah%2Fxae/sdmc%3A%2Fbah%2Fxaf/sdmc%3A%2Fbah%2Fxag/sdmc%3A%2Fbah%2Fxah/sdmc%3A%2Fbah%2Fxai/4036670/sdmc%3A%2Fbah%2Fxaj#filename.zip
+```
+
+## Embedding files within files with offsets (JBOD)
+jbod supports offsets (in decimal) for embedding data within files (the offset is 100, the size is 1234):
+
+```
+jbod:offset/100/1234/sdmc%3A%2Ftest.file
+```
+
+## Encrypting files (JBOD)
+jbod supports decrypting files.  Only AES128 is currently supported.  33333333333333333333333333333333 is the encryption key.
+
+```
+jbod:aes128/33333333333333333333333333333333/offset/0/1234/sdmc%3A%2Ftest.file
 ```
 
 The first number is the size of the following chunks.  The chunk size can be changed at anytime, and is often done so for the last chunk since it is often smaller.  The chunks are urlencoded and seperated by forward slashes.
