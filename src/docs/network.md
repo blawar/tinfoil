@@ -79,13 +79,17 @@ jbod:offset/100/1234/sdmc%3A%2Ftest.file
 ```
 
 ## Encrypting files (JBOD)
-jbod supports decrypting files.  Only AES128 is currently supported.  33333333333333333333333333333333 is the encryption key.
+jbod supports decrypting files.  Only AES-128-ECB is currently supported.  33333333333333333333333333333333 is the encryption key.
 
 ```
 jbod:aes128/33333333333333333333333333333333/offset/0/1234/sdmc%3A%2Ftest.file
 ```
 
 The first number is the size of the following chunks.  The chunk size can be changed at anytime, and is often done so for the last chunk since it is often smaller.  The chunks are urlencoded and seperated by forward slashes.
+
+An example python script to encrypt the files is located here:
+
+[encrypt.py](files/encrypt_nsz.py)
 
 ## URL Format
 Both files and folders follow the same format.  If specifying by the google file id, use gdrive:AAAAAAAAAAAAAAAAA (notice lack of forward slash).  If specifying a path (only works with OAuth) use gdrive:/root/folder1/file.zip
