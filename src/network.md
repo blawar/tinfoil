@@ -71,6 +71,8 @@ Example index file entry:
 jbod:10000000/sdmc%3A%2Fbah%2Fxaa/sdmc%3A%2Fbah%2Fxab/sdmc%3A%2Fbah%2Fxac/sdmc%3A%2Fbah%2Fxad/sdmc%3A%2Fbah%2Fxae/sdmc%3A%2Fbah%2Fxaf/sdmc%3A%2Fbah%2Fxag/sdmc%3A%2Fbah%2Fxah/sdmc%3A%2Fbah%2Fxai/4036670/sdmc%3A%2Fbah%2Fxaj#filename.zip
 ```
 
+The first number is the size of the following chunks.  The chunk size can be changed at anytime, and is often done so for the last chunk since it is often smaller.  The chunks are urlencoded and seperated by forward slashes.
+
 ## Embedding files within files with offsets (JBOD)
 jbod supports offsets (in decimal) for embedding data within files (the offset is 100, the size is 1234):
 
@@ -84,8 +86,6 @@ jbod supports decrypting files.  Only AES-128-ECB is currently supported.  33333
 ```
 jbod:aes128/33333333333333333333333333333333/offset/0/1234/sdmc%3A%2Ftest.file
 ```
-
-The first number is the size of the following chunks.  The chunk size can be changed at anytime, and is often done so for the last chunk since it is often smaller.  The chunks are urlencoded and seperated by forward slashes.
 
 An example python script to encrypt the files is located here:
 

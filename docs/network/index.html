@@ -323,6 +323,7 @@ A number in the path changes the file / chunk size.  It can be changed at any ti
 <pre><code>jbod:10000000/sdmc%3A%2Fbah%2Fxaa/sdmc%3A%2Fbah%2Fxab/sdmc%3A%2Fbah%2Fxac/sdmc%3A%2Fbah%2Fxad/sdmc%3A%2Fbah%2Fxae/sdmc%3A%2Fbah%2Fxaf/sdmc%3A%2Fbah%2Fxag/sdmc%3A%2Fbah%2Fxah/sdmc%3A%2Fbah%2Fxai/4036670/sdmc%3A%2Fbah%2Fxaj#filename.zip
 </code></pre>
 
+<p>The first number is the size of the following chunks.  The chunk size can be changed at anytime, and is often done so for the last chunk since it is often smaller.  The chunks are urlencoded and seperated by forward slashes.</p>
 <h2 id="embedding-files-within-files-with-offsets-jbod">Embedding files within files with offsets (JBOD)</h2>
 <p>jbod supports offsets (in decimal) for embedding data within files (the offset is 100, the size is 1234):</p>
 <pre><code>jbod:offset/100/1234/sdmc%3A%2Ftest.file
@@ -333,7 +334,6 @@ A number in the path changes the file / chunk size.  It can be changed at any ti
 <pre><code>jbod:aes128/33333333333333333333333333333333/offset/0/1234/sdmc%3A%2Ftest.file
 </code></pre>
 
-<p>The first number is the size of the following chunks.  The chunk size can be changed at anytime, and is often done so for the last chunk since it is often smaller.  The chunks are urlencoded and seperated by forward slashes.</p>
 <p>An example python script to encrypt the files is located here:</p>
 <p><a href="../files/encrypt_nsz.py">encrypt_nsz.py</a></p>
 <h2 id="url-format">URL Format</h2>
