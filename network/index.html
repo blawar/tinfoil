@@ -336,6 +336,13 @@ A number in the path changes the file / chunk size.  It can be changed at any ti
 
 <p>An example python script to encrypt the files is located here:</p>
 <p><a href="../files/encrypt_nsz.py">encrypt_nsz.py</a></p>
+<h2 id="packing-files-jbod">Packing files (JBOD)</h2>
+<p>JBOD allows you to pack more than one file into a single file and then reference each file using offsets and sizes.</p>
+<p>An example python script to pack multiple files is located here:
+<a href="../files/pack.py">pack.py</a></p>
+<pre><code>pack.py &quot;c:\nsz\dlc&quot; -o packed.bin --max-size 3000000
+</code></pre>
+
 <h2 id="url-format">URL Format</h2>
 <p>Both files and folders follow the same format.  If specifying by the google file id, use gdrive:AAAAAAAAAAAAAAAAA (notice lack of forward slash).  If specifying a path (only works with OAuth) use gdrive:/root/folder1/file.zip</p>
 <h2 id="auth">Auth</h2>
