@@ -91,6 +91,16 @@ An example python script to encrypt the files is located here:
 
 [encrypt_nsz.py](files/encrypt_nsz.py)
 
+## Packing files (JBOD)
+JBOD allows you to pack more than one file into a single file and then reference each file using offsets and sizes.
+
+An example python script to pack multiple files is located here:
+[pack.py](files/pack.py)
+
+```
+pack.py "c:\nsz\dlc" -o packed.bin --max-size 3000000
+```
+
 ## URL Format
 Both files and folders follow the same format.  If specifying by the google file id, use gdrive:AAAAAAAAAAAAAAAAA (notice lack of forward slash).  If specifying a path (only works with OAuth) use gdrive:/root/folder1/file.zip
 
