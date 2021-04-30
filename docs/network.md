@@ -89,7 +89,7 @@ The first number is the size of the following chunks.  The chunk size can be cha
 
 An example python script to encrypt the files is located here:
 
-[encrypt.py](files/encrypt_nsz.py)
+[encrypt_nsz.py](files/encrypt_nsz.py)
 
 ## URL Format
 Both files and folders follow the same format.  If specifying by the google file id, use gdrive:AAAAAAAAAAAAAAAAA (notice lack of forward slash).  If specifying a path (only works with OAuth) use gdrive:/root/folder1/file.zip
