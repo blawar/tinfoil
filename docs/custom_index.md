@@ -99,6 +99,18 @@ You may specify a client certificate using "clientCertPub" and "clientCertKey" j
 }
 ```
 
+## Themes
+
+You may specify a list of themes to download and become avalable in options using "Themes" json key:
+
+```
+{
+    "themes": ["https://mydomain.com/Theme_Name.zip", "https://anotherdomain.net/Themes/awoo.zip"]
+}
+```
+
+All theme files should be in the root of the zip. The name of the zip file becomes the Theme name and folder in Tinfoil.
+
 ## Theme Blacklist
 You may specify a list of themes to blacklist based on their hash using the "themeBlackList" json key:
 
